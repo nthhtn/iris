@@ -21,5 +21,5 @@ module.exports.process = (intentData, registry, callback) => {
 				return callback(err, `I had a problem finding out the time in ${location}`);
 			}
 			return callback(null, `In ${location}, it is now ${resp.body.result}`);
-		})
+		});
 };
