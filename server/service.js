@@ -3,10 +3,10 @@
 const express = require('express');
 const service = express();
 
-const ServiceRegistry = require('./serviceRegistry');
-const serviceRegistry = new ServiceRegistry();
-
 module.exports = (config) => {
+
+	const ServiceRegistry = require('./serviceRegistry');
+	const serviceRegistry = new ServiceRegistry(config.serviceTimeout);
 
 	service.set('serviceRegistry', serviceRegistry);
 

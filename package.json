@@ -16,6 +16,7 @@
     "superagent": "^3.5.2"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
     "nyc": "^11.0.2",
