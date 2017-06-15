@@ -15,6 +15,7 @@ module.exports.process = (intentData, registry, log, callback) => {
 		return callback(null, 'No service available');
 	}
 	request.get(`http://${service.ip}:${service.port}/service/${location}`)
+		.set('X-IRIS-SERVICE-TOKEN', service.accessToken)
 		.end((err, resp) => {
 			if (err || resp.statusCode != 200 || !resp.body.result) {
 				log.error(err);
