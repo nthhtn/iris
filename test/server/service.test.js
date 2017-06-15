@@ -30,18 +30,12 @@ describe('The Express service', () => {
 					return done();
 				});
 		});
-	});
-
-	describe('PUT /service/:intent/:port', () => {
 		it('should return HTTP 403 with no API token provided', (done) => {
 			request(service)
 				.put('/service/test/9999')
 				.expect(403)
 				.end(done);
 		});
-	});
-
-	describe('PUT /service/:intent/:port', () => {
 		it('should return HTTP 400 with no service token provided', (done) => {
 			request(service)
 				.put('/service/test/9999')
